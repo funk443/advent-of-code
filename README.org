@@ -1,0 +1,5 @@
+#+TITLE: Advent of Code in Clojure
+#+AUTHOR: CToID
+#+OPTIONS: toc:nil
+
+You can find solutions to every year under ~src/aoc/<year>~.
