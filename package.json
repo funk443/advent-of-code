@@ -1,0 +1,11 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {},
+  "author": "CToID <funk443@yandex.com>",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "js-md5": "^0.8.3"
+  }
+}
