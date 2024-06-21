@@ -14,8 +14,8 @@
 // along with this program.  If not, see
 // <https://www.gnu.org/licenses/>.
 
-import { readFileSync } from "node:fs";
-import { printResult } from "../utils.js";
+import {readFileSync} from "node:fs";
+import {printResult} from "../utils.js";
 
 const LIGHTS_WIDTH = 1000;
 const LIGHTS_HEIGHT = 1000;
@@ -67,7 +67,7 @@ function applyToRegion(
 function solve1() {
     const lights = new Array(LIGHTS_WIDTH * LIGHTS_HEIGHT).fill(0);
 
-    for (let { start, end, mode } of input) {
+    for (let {start, end, mode} of input) {
         switch (mode) {
         case "on":
             applyToRegion(lights, start, end, _ => 1);
@@ -94,7 +94,7 @@ function solve1() {
 function solve2() {
     const lights = new Array(LIGHTS_WIDTH * LIGHTS_HEIGHT).fill(0);
 
-    for (let { start, end, mode } of input) {
+    for (let {start, end, mode} of input) {
         switch (mode) {
         case "on":
             applyToRegion(lights, start, end, x => x + 1);

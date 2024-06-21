@@ -14,8 +14,8 @@
 // along with this program.  If not, see
 // <https://www.gnu.org/licenses/>.
 
-import { readFileSync } from "node:fs";
-import { printResult } from "../utils.js";
+import {readFileSync} from "node:fs";
+import {printResult} from "../utils.js";
 
 const ANSWER_WIRE = "a";
 
@@ -55,12 +55,12 @@ function parseInput(line) {
 
     let result = undefined;
 
-    for (let { name, regexp } of regexps) {
+    for (let {name, regexp} of regexps) {
         const isMatched = line.match(regexp);
         if (!isMatched) continue;
 
         const groups = isMatched.slice(1);
-        result = { name };
+        result = {name};
 
         switch (name) {
         case "assign":
@@ -116,7 +116,7 @@ function solve1() {
         for (let operation of operations) {
             switch (operation.name) {
             case "assign": {
-                const { from, to } = operation;
+                const {from, to} = operation;
                 const num = parseInt(from);
 
                 if (!isNaN(num)) {
@@ -134,7 +134,7 @@ function solve1() {
             } break;
 
             case "not": {
-                const { from, to } = operation;
+                const {from, to} = operation;
                 const num = parseInt(from);
 
                 if (!isNaN(num)) {
@@ -152,7 +152,7 @@ function solve1() {
             } break;
 
             case "and": {
-                const { left, right, to } = operation;
+                const {left, right, to} = operation;
                 const leftNum = parseInt(left);
                 const rightNum = parseInt(right);
 
@@ -183,7 +183,7 @@ function solve1() {
             } break;
 
             case "or": {
-                const { left, right, to } = operation;
+                const {left, right, to} = operation;
                 const leftNum = parseInt(left);
                 const rightNum = parseInt(right);
 
@@ -214,7 +214,7 @@ function solve1() {
             } break;
 
             case "lshift": {
-                const { left, right, to } = operation;
+                const {left, right, to} = operation;
                 const leftNum = parseInt(left);
                 const rightNum = parseInt(right);
 
@@ -245,7 +245,7 @@ function solve1() {
             } break;
 
             case "rshift": {
-                const { left, right, to } = operation;
+                const {left, right, to} = operation;
                 const leftNum = parseInt(left);
                 const rightNum = parseInt(right);
 
@@ -292,7 +292,7 @@ function solve2() {
         for (let operation of operations) {
             switch (operation.name) {
             case "assign": {
-                const { from, to } = operation;
+                const {from, to} = operation;
 
                 if (wires.get(to) !== undefined) break;
 
@@ -313,7 +313,7 @@ function solve2() {
             } break;
 
             case "not": {
-                const { from, to } = operation;
+                const {from, to} = operation;
 
                 if (wires.get(to) !== undefined) break;
 
@@ -334,7 +334,7 @@ function solve2() {
             } break;
 
             case "and": {
-                const { left, right, to } = operation;
+                const {left, right, to} = operation;
 
                 if (wires.get(to) !== undefined) break;
 
@@ -368,7 +368,7 @@ function solve2() {
             } break;
 
             case "or": {
-                const { left, right, to } = operation;
+                const {left, right, to} = operation;
 
                 if (wires.get(to) !== undefined) break;
 
@@ -402,7 +402,7 @@ function solve2() {
             } break;
 
             case "lshift": {
-                const { left, right, to } = operation;
+                const {left, right, to} = operation;
 
                 if (wires.get(to) !== undefined) break;
 
@@ -436,7 +436,7 @@ function solve2() {
             } break;
 
             case "rshift": {
-                const { left, right, to } = operation;
+                const {left, right, to} = operation;
 
                 if (wires.get(to) !== undefined) break;
 

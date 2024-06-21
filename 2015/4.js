@@ -14,8 +14,8 @@
 // along with this program.  If not, see
 // <https://www.gnu.org/licenses/>.
 
-import { readFileSync } from "node:fs";
-import { printResult } from "../utils.js";
+import {readFileSync} from "node:fs";
+import {printResult} from "../utils.js";
 import md5 from "js-md5";
 
 const input = readFileSync("../inputs/2015/4", "utf8").trim();
