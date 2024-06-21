@@ -62,6 +62,7 @@ function solve1() {
 
         default:
             console.warn("WARNING: invalid char in the input.");
+            console.warn(`    ${c}`);
             continue;
         }
     }
@@ -107,6 +108,7 @@ function solve2() {
 
         default:
             console.warn("WARNING: invalid char in the input.");
+            console.warn(`    ${c}`);
             continue;
         }
     }
